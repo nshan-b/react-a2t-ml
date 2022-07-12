@@ -164,34 +164,34 @@ namespace react_a2t_ml.Controllers {
 
         // PUT: api/Sentiments/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutSentiments(int id, Sentiments sentiments)
-        {
-            if (id != sentiments.Id)
-            {
-                return BadRequest();
-            }
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutSentiments(int id, Sentiments sentiments)
+        //{
+        //    if (id != sentiments.Id)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            _context.Entry(sentiments).State = EntityState.Modified;
+        //    _context.Entry(sentiments).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!SentimentsExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!SentimentsExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
         // POST: api/Sentiments
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
@@ -271,15 +271,15 @@ namespace react_a2t_ml.Controllers {
             //return Ok(res);
             //return Ok(sentiments);
 
-        //  if (_context.Sentiments == null)
-        //  {
-        //      return Problem("Entity set 'react_a2t_mlContext.Sentiments'  is null.");
-        //  }
-        //    _context.Sentiments.Add(sentiments);
-        //    await _context.SaveChangesAsync();
+            //  if (_context.Sentiments == null)
+            //  {
+            //      return Problem("Entity set 'react_a2t_mlContext.Sentiments'  is null.");
+            //  }
+            //    _context.Sentiments.Add(sentiments);
+            //    await _context.SaveChangesAsync();
 
-        //    return CreatedAtAction("GetSentiments", new { id = sentiments.Id }, sentiments);
-        //}
+            //    return CreatedAtAction("GetSentiments", new { id = sentiments.Id }, sentiments);
+        }
 
         // DELETE: api/Sentiments/5
         [HttpDelete("{id}")]
